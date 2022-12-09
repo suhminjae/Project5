@@ -5,7 +5,7 @@ import java.util.List;
 public interface BoardService {
     public int insertBoard(BoardVO vo);
 
-    public int deleteBoard(int seq);
+    public int deleteBoard(int id);
 
     public int updateBoard(BoardVO vo);
 
