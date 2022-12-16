@@ -4,12 +4,13 @@ import java.util.Date;
 
 public class BoardVO {
 	private int seq;
-	private String category;
 	private String title;
-	private String writer;
-	private String content;
+	private String home;
+	private String away;
+	private String winner;
 	private Date regdate;
 	private int cnt;
+	private String content;
 	
 	public int getSeq() {
 		return seq;
@@ -23,17 +24,17 @@ public class BoardVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getWriter() {
-		return writer;
+	public String getHome() {
+		return home;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setHome(String home) {
+		this.home = home;
 	}
-	public String getContent() {
-		return content;
+	public String getAway() {
+		return away;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setAway(String away) {
+		this.away = away;
 	}
 	public Date getRegdate() {
 		return regdate;
@@ -48,6 +49,10 @@ public class BoardVO {
 		this.cnt = cnt;
 	}
 
-	public String getCategory() {return category;}
-	public void setCategory(String category){ this.category=category;}
+	public String getWinner() {return winner;}
+	public void setWinner(String winner){ this.winner=winner;}
+
+    public String getContent() {return content;}
+
+	public void setContent(String content) { this.content = content;}
 }

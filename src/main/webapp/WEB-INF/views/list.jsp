@@ -7,10 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <title>Title</title>
     <style>
+        h1{
+            color: #6E0929FF;
+            text-align: center;
+        }
         #list {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -27,7 +32,7 @@
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: center;
-            background-color: #006bb3;
+            background-color: #6E0929FF;
             color: white;
         }
     </style>
@@ -40,25 +45,27 @@
     </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>FIFA WORLD CUP</h1>
 <table id="list" width="90%">
     <tr>
         <th>id</th>
-        <th>category</th>
-        <th>title</th>
-        <th>writer</th>
-        <th>content</th>
-        <th>regdate</th>
-        <th>edit</th>
-        <th>delete</th>
+        <th>경기</th>
+        <th>홈팀</th>
+        <th>원정팀</th>
+        <th>승리팀</th>
+        <th>mvp가 속한 팀</th>
+        <th>등록일자</th>
+        <th>수정</th>
+        <th>삭제</th>
     </tr>
 
-<c:forEach items="${list}" var="u">
+<c:forEach items="${list}" var="u" varStatus="status">
     <tr>
-        <td>${u.seq}</td>
-        <td>${u.category}</td>
+        <td>${fn:length(list)-status.index}</td>
         <td>${u.title}</td>
-        <td>${u.writer}</td>
+        <td>${u.home}</td>
+        <td>${u.away}</td>
+        <td>${u.winner}</td>
         <td>${u.content}</td>
         <td>${u.regdate}</td>
         <td><a href="editform/${u.seq}">글수정</a></td>
@@ -66,6 +73,6 @@
     </tr>
     </c:forEach>
 </table>
-<br/><button type="button" onclick="location.href='add'">새글쓰기</button>
+<br/><button type="button" onclick="location.href='add'">경기 결과 작성</button>
 </body>
 </html>

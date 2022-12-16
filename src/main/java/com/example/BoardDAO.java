@@ -23,11 +23,11 @@ public class BoardDAO {
     }
 
     public int deleteBoard(int id) {
-        int result = sqlSession.delete("Board.insertBoard", id);
+        int result = sqlSession.delete("Board.deleteBoard", id);
         return result;
     }
     public int updateBoard(BoardVO vo) {
-        int result = sqlSession.update("Board.insertBoard", vo);
+        int result = sqlSession.update("Board.updateBoard", vo);
         return result;
     }
 
