@@ -18,6 +18,7 @@ import static com.mysql.cj.conf.PropertyKey.logger;
 public class BoardController {
 
     @Autowired
+
     BoardServiceImpl boardService;
 
 
