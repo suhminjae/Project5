@@ -10,7 +10,14 @@
 <head>
     <title>Title</title>
 </head>
+<style>
+    h1{
+        color: #6E0929FF;
+
+    }
+</style>
 <body>
+<h1>FIFA WORLD CUP</h1>
 <form action="addok" method="post">
     <table id="edit">
         <tr><td>경기</td><td><select onchange="categoryChange(this)" type="select" name="title">

@@ -15,6 +15,7 @@
         h1{
             color: #6E0929FF;
             text-align: center;
+
         }
         #list {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
