@@ -11,7 +11,14 @@
 <head>
     <title>Title</title>
 </head>
+<style>
+    h1{
+        color: #6E0929FF;
+
+    }
+</style>
 <body>
+<h1>FIFA WORLD CUP</h1>
 <form:form modelAttribute="u" method="post" action="../editok">
     <form:hidden path="seq"/>
     <table id="edit">

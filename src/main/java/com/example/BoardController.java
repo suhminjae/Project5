@@ -18,6 +18,7 @@ import static com.mysql.cj.conf.PropertyKey.logger;
 public class BoardController {
 
     @Autowired
+
     BoardServiceImpl boardService;
 
 
@@ -28,6 +29,7 @@ public class BoardController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Locale locale, Model model){
+
         Date date= new Date();
         DateFormat dateFormat=DateFormat.getDateTimeInstance(DateFormat.LONG,DateFormat.LONG,locale);
         String formattedDate=dateFormat.format(date);
